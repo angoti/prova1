@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Thymeleaf</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+      <h2>Product list</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Available from</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="produto:${listadeprodutos}">
+            <td th:text="${produto.description}">XXX</td>
+            <td th:text="${produto.price}">XXX</td>
+            <td th:text="${{produto.availableFrom}}">XXX</td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>
